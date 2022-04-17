@@ -42,6 +42,12 @@
       ],
       "@graphqlTypes": [
         "__generated__"
+      ],
+      "@libs/*": [
+        "src/libs/*"
+      ],
+      "@libs": [
+        "src/libs"
       ]
     },
     "incremental": true

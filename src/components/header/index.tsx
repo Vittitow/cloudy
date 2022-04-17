@@ -4,8 +4,10 @@ import { Logo } from "@components";
 
 export const Header: React.FC = () => {
   return (
-    <div className="text-center bg-gray-800">
-      <Logo />
+    <div className="text-center bg-blue-500">
+      <a href="#">
+        <Logo />
+      </a>
     </div>
   );
 };

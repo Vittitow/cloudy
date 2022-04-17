@@ -1,10 +1,14 @@
 import type { NextRequest } from 'next/server';
-import getQuotes from 'src/lib/quote-api';
+import getQuotes from '@libs/quote-api';
 
 
 export default async function middleware(
   request: NextRequest
 ) {
+
+  if(request.nextUrl.pathname === '/api/status') {
+    return new Response(null, { status: 200, statusText: 'OK' });
+  }
 
   if(request.nextUrl.pathname === '/api/quotes' && request.method === 'POST') {
     const data = await request.json();
@@ -15,5 +19,5 @@ export default async function middleware(
       headers: { 'Content-Type': 'application/json' }
     });
   }
-  
+
 }

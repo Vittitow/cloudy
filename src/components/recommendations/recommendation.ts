@@ -1,4 +1,4 @@
-import { QuoteRequest } from "src/lib/quote-api";
+import { QuoteRequest } from "@libs/quote-api";
 
 export async function getQuotes(request: QuoteRequest) {
   const options = {

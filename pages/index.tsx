@@ -7,7 +7,6 @@ const Home: React.FC = () => {
   return (
     <Container>
       <Header />
-      <Main />
       <Recommendations />
       <Footer />
     </Container>

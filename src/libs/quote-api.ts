@@ -43,8 +43,8 @@ async function providerQuote(provider: Provider, request: QuoteRequest) {
     body: JSON.stringify({
       ...request,
       provider: provider,
-      cost: 1,
-      capacity: 1,
+      cost: Math.floor(Math.random() * (1000 - 100 + 1) + 100),
+      capacity: Math.floor(Math.random() * 100),
     }),
   };
 
