@@ -1,9 +1,9 @@
-import { QuoteRequest } from "@libs/quote-api";
+import { QuoteRequest } from '@libs/quote-api';
 
 export async function getQuotes(request: QuoteRequest) {
   const options = {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(request),
   };
 

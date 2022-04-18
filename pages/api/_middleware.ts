@@ -7,14 +7,17 @@ export default async function middleware(
 ) {
 
   if(request.nextUrl.pathname === '/api/status') {
-    return new Response(null, { status: 200, statusText: 'OK' });
+    return new Response('Hello World!');
   }
 
   if(request.nextUrl.pathname === '/api/quotes' && request.method === 'POST') {
+    console.log('/api/quotes');
     const data = await request.json();
+    console.log(data);
     const quotes = await getQuotes(data);
+    console.log(quotes);
 
-    return new Response(JSON.stringify(quotes, null, 2), {
+    return new Response(JSON.stringify(quotes), {
       status: 200,
       headers: { 'Content-Type': 'application/json' }
     });
