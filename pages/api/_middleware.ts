@@ -5,9 +5,9 @@ import getQuotes from '@libs/quote-api';
 export default async function middleware(
   request: NextRequest
 ) {
-
+  
   if(request.nextUrl.pathname === '/api/status') {
-    return new Response(null, { status: 200, statusText: 'OK' });
+    return new Response('Hello World!');
   }
 
   if(request.nextUrl.pathname === '/api/quotes' && request.method === 'POST') {
